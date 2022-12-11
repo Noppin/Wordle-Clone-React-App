@@ -1,0 +1,149 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: #181818;
+}
+#main-navbar{
+    height: 80px;
+    width: 100vw;
+    background-color: #202020;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 25%;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+    height: 100%;
+    
+}
+#main{
+    height: 90vh;
+}
+#main .letter{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+#main .letter .row{
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+#main .letter .row div{
+    height: 64px;
+    width: 64px;
+    font-size: 40px;
+    border-radius: 5px;
+    border: 2px solid #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.game{
+    margin: 0 auto;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.key-btn{
+    color: #fff;
+    font-size: 17px;
+    margin: 3px;
+    padding: 10px 20px;
+    background-color: #818384;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.key-btn:active{
+    background-color: #5555;
+}
+.keyboard{
+    display: flex;
+    flex-direction: column;
+
+    margin: 20px 0;
+}
+.keyboard .top-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.keyboard .middle-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.keyboard .bottom-row{
+    display: flex;
+    flex-direction: row;
+}
+.del-key{
+    flex: 2;
+}
+
+/* .enter{
+    pointer-events: none;
+} */
+
+.char{
+    transition: 0.5s linear;
+}
+
+.greenColour{
+    background-color: #538d4e !important;
+    color: #fff;
+}
+
+.greyColour{
+    background-color: #3a3a3c !important;
+    color: #fff;
+}
+
+.yellowColour{
+    background-color: #B59f3b !important;
+    color: #fff;
+}
+
+@media screen and (max-width:650px ) {
+        .key-btn {
+             font-size: 12px;
+            margin: 3px;
+            padding: 10px 10px;
+        }
+        #main .letter .row div {
+            height: 50px;
+            width: 50px;
+            font-size: 30px;
+        }
+        #main-navbar {
+            font-size: 1rem;
+        }
+}
+    
