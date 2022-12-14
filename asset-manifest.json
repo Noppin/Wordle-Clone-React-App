@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Wordle-Clone-React-App/static/css/main.22731ea7.css",
-    "main.js": "/Wordle-Clone-React-App/static/js/main.ac904e54.js",
+    "main.js": "/Wordle-Clone-React-App/static/js/main.46715b0d.js",
     "static/media/words.txt": "/Wordle-Clone-React-App/static/media/words.0acea1c53401a89146ab.txt",
     "index.html": "/Wordle-Clone-React-App/index.html",
     "main.22731ea7.css.map": "/Wordle-Clone-React-App/static/css/main.22731ea7.css.map",
-    "main.ac904e54.js.map": "/Wordle-Clone-React-App/static/js/main.ac904e54.js.map"
+    "main.46715b0d.js.map": "/Wordle-Clone-React-App/static/js/main.46715b0d.js.map"
   },
   "entrypoints": [
     "static/css/main.22731ea7.css",
-    "static/js/main.ac904e54.js"
+    "static/js/main.46715b0d.js"
   ]
 }
