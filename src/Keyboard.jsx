@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { BoardContext } from "./App";
 
 export const Keyboard =()=>{
-    const {clickLetter, clickDelete, clickEnter, colourKey} = useContext(BoardContext);
+    const {clickLetter, clickDelete, clickEnter, colourState} = useContext(BoardContext);
     const keyLine1 = ["Q","W","E","R","T", "Y","U","I","O","P"];
     const keyLine2 = ["A","S","D","F","G", "H","J","K","L"];
     const keyLine3 = ["Z","X","C","V","B", "N","M"];
@@ -44,14 +44,26 @@ export const Keyboard =()=>{
             <div className="top-row">
                {keyLine1.map(key=>{
                 return (
-                    <Key value={key} colour = {colourKey.includes(key)}/>
+                    <Key 
+                    key={key} 
+                    value={key} 
+                    greenColour= {colourState.setGreen.includes(key)}
+                    yellowColour = {colourState.setYellow.includes(key)}
+                    greyColour = {colourState.setGrey.includes(key)}
+                    />
                 )
                })}
             </div>
             <div className="middle-row">
                {keyLine2.map(key=>{
                 return (
-                    <Key value={key} colour = {colourKey.includes(key)}/>
+                     <Key 
+                    key={key} 
+                    value={key} 
+                    greenColour= {colourState.setGreen.includes(key)}
+                    yellowColour = {colourState.setYellow.includes(key)}
+                    greyColour = {colourState.setGrey.includes(key)}
+                    />
                 )
                })}
             </div>
@@ -59,7 +71,13 @@ export const Keyboard =()=>{
                 <Key value="Del"/>
                 {keyLine3.map(key=>{
                 return (
-                    <Key value={key} colour = {colourKey.includes(key)}/>
+                    <Key 
+                    key={key} 
+                    value={key} 
+                    greenColour= {colourState.setGreen.includes(key)}
+                    yellowColour = {colourState.setYellow.includes(key)}
+                    greyColour = {colourState.setGrey.includes(key)}
+                    />
                 )
                })}
                 <Key value="Enter"/>
@@ -70,8 +88,8 @@ export const Keyboard =()=>{
         
 };
 
-const Key =({value, colour})=>{
-    const {clickLetter, clickDelete, clickEnter, board, currAttempt, correctWord} = useContext(BoardContext)
+const Key =({value, greenColour, yellowColour, greyColour})=>{
+    const {clickLetter, clickDelete, clickEnter} = useContext(BoardContext);
     const displayLetter =()=>
     {   
         if(value === "Enter"){
@@ -94,7 +112,7 @@ const Key =({value, colour})=>{
             <div className="key-btn enter" onClick={displayLetter}>{value}</div>
             )
             :(
-            <div className={`key-btn ${colour && "greyColour"}`} onClick={displayLetter}>{value}</div>
+            <div className={`key-btn ${greenColour ? "greenColour":""} ${yellowColour ? "yellowColour":""} ${greyColour ? "greyColour":""}`} onClick={displayLetter}>{value}</div>
             )     
     )
 }
